@@ -1,13 +1,32 @@
 # @tspro/tsup-plugin-inline-assets
 
-Use this plugin to import assets such as images and audio.
+Use this plugin to import assets such as images and audio files.
 
-## Install
+Supported files are `.png`, `.jpg`, `.jpeg`, `.gif`, `.mp3`, `.ogg` and `.wav`.
+
+```ts
+import Logo from './assets/logo.png';
+
+console.log(typeof Logo); // "string"
+console.log(Logo);        // "data:image/png;base64,..."
+```
+
+You might need to declare e.g. in `global.d.ts`:
+
+```ts
+declare module "*.png" {
+  const value: string;
+  export default value;
+}
+```
+
+## Usage
+Install as dev dependency:
 ```sh
 npm i --save-dev @tspro/tsup-plugin-inline-assets
 ```
 
-## Use in `tsup.config.ts`
+Configure `tsup.config.ts`:
 ```ts
 import { tsupPluginInlineAssets } from "@tspro/tsup-plugin-inline-assets";
 
@@ -15,32 +34,12 @@ export default defineConfig([
     {
         // ...
         esbuildPlugins: [tsupPluginInlineAssets()]
+        // plugins: [tsupPluginInlineAssets()] did not work.
         // ...
     }
 ]);
 ```
-
-Use verbose option to log inlining assets: `tsupPluginInlineAssets({verbose: true})`.
-
-(Maybe this plugin works also with esbuild bundler, because you have to use `esbuildPlugins` (not the `plugins`) property?)
-
-## Import Assets
-```ts
-// Declare e.g. in global.d.ts
-declare module "*.png" {
-  const value: string;
-  export default value;
-}
-```
-
-```ts
-// Import assets
-import Logo from './assets/logo.png';
-```
-
-`Logo` contains now the image data as base64 string e.g. `"data:image/png;base64,..."`.
-
-Supported files are `.png`, `.jpg`, `.jpeg`, `.gif`, `.mp3`, `.ogg` and `.wav`.
+Log inlining assets: `tsupPluginInlineAssets({verbose: true})`.
 
 ## License
 This plugin is public domain. Plugin itself was written by ChatGPT.
