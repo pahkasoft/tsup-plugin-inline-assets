@@ -20,7 +20,9 @@ export default defineConfig([
 ]);
 ```
 
-Maybe this works also with esbuild bundler, because you have to use `esbuildPlugins` (not the `plugins`) property?
+Use verbose option to log inlining assets: `tsupPluginInlineAssets({verbose: true})`.
+
+(Maybe this plugin works also with esbuild bundler, because you have to use `esbuildPlugins` (not the `plugins`) property?)
 
 ## Import Assets
 ```ts
