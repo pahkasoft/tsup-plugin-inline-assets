@@ -2,12 +2,14 @@ import { Plugin } from 'esbuild';
 import fs from 'fs';
 import path from 'path';
 
-export function tsupPluginInlineAssets(): Plugin {
+export function tsupPluginInlineAssets(options?: { verbose?: boolean }): Plugin {
     return {
         name: 'inline-assets',
         setup(build) {
             build.onLoad({ filter: /\.(png|jpg|jpeg|gif|mp3|ogg|wav)$/ }, async (args) => {
-                console.log(`Inlining asset: ${path.basename(args.path)}`);
+                if (options?.verbose) {
+                    console.log(`Inlining asset: ${path.basename(args.path)}`);
+                }
 
                 const ext = path.extname(args.path).slice(1);
                 const mime = {
