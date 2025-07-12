@@ -23,6 +23,15 @@ Maybe it also works with esbuild, because you have to use `esbuildPlugins` prope
 
 ## Import Assets
 ```ts
+// Declare e.g. in global.d.ts
+declare module "*.png" {
+  const value: string;
+  export default value;
+}
+```
+
+```ts
+// Import assets
 import Logo from './assets/logo.png';
 ```
 
