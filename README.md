@@ -1,5 +1,6 @@
-# tsup-plugin-inline-assets
-Use this plugin to import
+# @tspro/tsup-plugin-inline-assets
+
+Use this plugin to import assets such as images and audio.
 
 ## Install
 ```sh
@@ -19,7 +20,7 @@ export default defineConfig([
 ]);
 ```
 
-Maybe it also works with esbuild, because you have to use `esbuildPlugins` property, not `plugins`?
+Maybe this works also with esbuild bundler, because you have to use `esbuildPlugins` (not the `plugins`) property?
 
 ## Import Assets
 ```ts
