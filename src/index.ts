@@ -8,7 +8,8 @@ export function tsupPluginInlineAssets(options?: { verbose?: boolean }): Plugin 
         setup(build) {
             build.onLoad({ filter: /\.(png|jpg|jpeg|gif|mp3|ogg|wav)$/ }, async (args) => {
                 if (options?.verbose) {
-                    console.log(`Inlining asset: ${path.basename(args.path)}`);
+                    const relativePath = path.relative(process.cwd(), args.path);
+                    console.log(`Inlining asset: ${relativePath}`);
                 }
 
                 const ext = path.extname(args.path).slice(1);
