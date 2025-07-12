@@ -1,0 +1,32 @@
+{
+    "name": "@tspro/tsup-plugin-inline-assets",
+    "version": "1.0.0",
+    "author": "PahkaSoft",
+    "license": "Unlicensed",
+    "private": false,
+    "bugs": {
+        "url": "https://github.com/pahkasoft/issues/issues/new"
+    },
+    "description": "Inline assets plugin for tsup bundler.",
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index.js",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.13",
+        "rimraf": "^6.0.1",
+        "typescript": "latest"
+    },
+    "peerDependencies": {
+        "esbuild": ">=0.14.0 <1"
+    },
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "npm run clean && tsc"
+    }
+}
