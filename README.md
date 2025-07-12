@@ -38,6 +38,8 @@ declare module "*.png" {
 import Logo from './assets/logo.png';
 ```
 
+`Logo` contains now the image data as base64 string e.g. `"data:image/png;base64,..."`.
+
 Supported files are `.png`, `.jpg`, `.jpeg`, `.gif`, `.mp3`, `.ogg` and `.wav`.
 
 ## License
