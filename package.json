@@ -1,6 +1,6 @@
 {
     "name": "@tspro/tsup-plugin-inline-assets",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "author": "PahkaSoft",
     "license": "Unlicensed",
     "private": false,
