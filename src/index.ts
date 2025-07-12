@@ -15,7 +15,7 @@ export function tsupPluginInlineAssets(options?: { verbose?: boolean }): Plugin 
                 const ext = path.extname(args.path).slice(1);
                 const mime = {
                     png: 'image/png',
-                    jpg: 'image/jpg',
+                    jpg: 'image/jpeg',
                     jpeg: 'image/jpeg',
                     gif: 'image/gif',
                     mp3: 'audio/mpeg',
