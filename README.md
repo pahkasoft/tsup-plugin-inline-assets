@@ -9,6 +9,11 @@ import Logo from './assets/logo.png';
 
 console.log(typeof Logo); // "string"
 console.log(Logo);        // "data:image/png;base64,..."
+
+// Example use
+let img = document.getElementById('img');
+let img = new Image();
+img.src = Logo;
 ```
 
 You might need to declare e.g. in `global.d.ts`:
