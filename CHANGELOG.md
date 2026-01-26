@@ -1,4 +1,7 @@
 # Changelog
+## [1.0.2] - 2026-01-26
+### Fixed
+- Update `README.md`.
 
 ## [1.0.1] - 2026-01-26
 ### Changes
