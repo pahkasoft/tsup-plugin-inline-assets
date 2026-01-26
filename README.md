@@ -36,7 +36,9 @@ export default defineConfig([
 
 Note! `{ verbose: true }` is optional.
 
-### Update `global.d.ts`
+## Example Use
+
+Edit for example `global.d.ts`:
 
 ```ts
 declare module "*.png" {
@@ -45,7 +47,7 @@ declare module "*.png" {
 }
 ```
 
-## Usage
+Import and use asset:
 
 ```ts
 import Logo from './assets/logo.png';
