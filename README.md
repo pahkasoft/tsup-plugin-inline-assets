@@ -1,22 +1,42 @@
 # @tspro/tsup-plugin-inline-assets
 
-Use this plugin to import assets such as images and audio files.
+Use this plugin to import assets such as images and audio files
+as Base64 encoded strings.
 
-Supported files are `.png`, `.jpg`, `.jpeg`, `.gif`, `.mp3`, `.ogg` and `.wav`.
+## Supported File Extensions
 
-```ts
-import Logo from './assets/logo.png';
+Supported file extensions:
+- `.png`
+- `.jpg`
+- `.jpeg`
+- `.gif`
+- `.mp3`
+- `.ogg`
+- `.wav`
 
-console.log(typeof Logo); // "string"
-console.log(Logo);        // "data:image/png;base64,..."
+## Quick Start
 
-// Example use
-let img = document.getElementById('img');
-let img = new Image();
-img.src = Logo;
+### Install
+
+```sh
+npm install -D @tspro/tsup-plugin-inline-assets
 ```
 
-You might need to declare e.g. in `global.d.ts`:
+### Config `tsup.config.ts`
+
+```ts
+import { tsupPluginInlineAssets } from "@tspro/tsup-plugin-inline-assets";
+
+export default defineConfig([
+    {
+        esbuildPlugins: [tsupPluginInlineAssets({ verbose: true })]
+    }
+]);
+```
+
+Note! `{ verbose: true }` is optional.
+
+### Update `global.d.ts`
 
 ```ts
 declare module "*.png" {
@@ -26,46 +46,25 @@ declare module "*.png" {
 ```
 
 ## Usage
-Install as dev dependency:
-```sh
-npm i --save-dev @tspro/tsup-plugin-inline-assets
-```
 
-Configure `tsup.config.ts`:
 ```ts
-import { tsupPluginInlineAssets } from "@tspro/tsup-plugin-inline-assets";
+import Logo from './assets/logo.png';
 
-export default defineConfig([
-    {
-        // ...
-        esbuildPlugins: [tsupPluginInlineAssets()]
-        // plugins: [tsupPluginInlineAssets()] did not work.
-        // ...
-    }
-]);
+// Logo is now Base64 encoded string.
+console.log(typeof Logo); // "string"
+console.log(Logo);        // "data:image/png;base64,..."
+
+// Example
+let img = new Image();
+img.src = Logo;
 ```
-Log inlining assets: `tsupPluginInlineAssets({verbose: true})`.
 
 ## License
-This plugin is public domain. Plugin itself was written by ChatGPT.
 
-## Publish
-```sh
-# Update changelog
-git log --pretty="- %s"
+This project is public domain.
 
-# Update version
-npm version major|minor|patch
+The full license text is available in the project repository.
 
-# Build
-npm run build
+## Disclaimer
 
-# Publish
-npm login
-npm publish --access public
-```
-
-## Changelog
-### [1.0.0] - 2025-07-12
-#### Added
-- First release.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
