@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.3] - 2026-01-26
+### Fixed
+- Update `README.md`.
+- Update `package.json`'s `"homepage"`, `"repository"` and `"bugs"` fields.
+
 ## [1.0.2] - 2026-01-26
 ### Fixed
 - Update `README.md`.

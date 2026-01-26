@@ -1,6 +1,6 @@
 {
     "name": "@tspro/tsup-plugin-inline-assets",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "Stefan B.",
     "license": "Unlicensed",
     "private": false,
