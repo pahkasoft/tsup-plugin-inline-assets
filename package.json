@@ -4,10 +4,15 @@
     "author": "Stefan B.",
     "license": "Unlicensed",
     "private": false,
-    "bugs": {
-        "url": "https://github.com/pahkasoft/issues/issues/new"
+    "homepage": "https://pahkasoft.com/tsup-plugin-inline-assets",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pahkasoft/tsup-plugin-inline-assets.git"
     },
-    "description": "Inline assets plugin for tsup bundler.",
+    "bugs": {
+        "url": "https://github.com/pahkasoft/tsup-plugin-inline-assets/issues"
+    },
+    "description": "An inline assets plugin for tsup.",
     "types": "./dist/index.d.ts",
     "main": "./dist/index.js",
     "exports": {
