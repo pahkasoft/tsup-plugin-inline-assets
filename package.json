@@ -1,14 +1,9 @@
 {
     "name": "@tspro/tsup-plugin-inline-assets",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "author": "Stefan B.",
     "license": "Unlicensed",
     "private": false,
-    "homepage": "https://pahkasoft.github.io/tsup-plugin-inline-assets",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pahkasoft/tsup-plugin-inline-assets.git"
-    },
     "description": "An inline assets plugin for tsup.",
     "types": "./dist/index.d.ts",
     "main": "./dist/index.js",

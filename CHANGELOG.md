@@ -1,5 +1,9 @@
 # Changelog
-## [1.0.4] - 2026-01-26
+## [1.0.5] - 2026-07-28
+### Fixed
+- Remove package.json links.
+
+## [1.0.4] - 2026-07-28
 ### Fixed
 - Update package.json links.
 - Remove README.md links.
