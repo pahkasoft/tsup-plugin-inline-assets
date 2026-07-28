@@ -3,11 +3,6 @@
 Use this plugin to import assets such as images and audio files
 as Base64 encoded strings.
 
-## Resources
-
-[NPM Package](https://www.npmjs.com/package/@tspro/tsup-plugin-inline-assets) |
-[GitHub Repository](https://github.com/pahkasoft/tsup-plugin-inline-assets)
-
 ## Supported File Extensions
 
 Supported file extensions:
