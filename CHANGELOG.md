@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.6] - 2026-07-28
+### Fixed
+- Restore package.json repo link.
+- Fix typescript version.
+
 ## [1.0.5] - 2026-07-28
 ### Fixed
 - Remove package.json links.
