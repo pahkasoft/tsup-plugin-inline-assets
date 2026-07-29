@@ -5,6 +5,10 @@
     "license": "Unlicensed",
     "private": false,
     "description": "An inline assets plugin for tsup.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pahkasoft/tsup-plugin-inline-assets.git"
+    },
     "types": "./dist/index.d.ts",
     "main": "./dist/index.js",
     "exports": {
