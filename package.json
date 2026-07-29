@@ -21,7 +21,7 @@
     "devDependencies": {
         "@types/node": "^24.0.13",
         "rimraf": "^6.0.1",
-        "typescript": "latest"
+        "typescript": "^7.0.2"
     },
     "peerDependencies": {
         "esbuild": ">=0.14.0 <1"
